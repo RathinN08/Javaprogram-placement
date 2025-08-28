@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        int length = 0;
+        try {
+            while(true) {
+                input.charAt(length);
+                length++;
+            }
+        } catch (IndexOutOfBoundsException e) {
+            // When we go beyond the string length, charAt throws this exception
+        }
+        System.out.println(length);
+        sc.close();
+    }
+}
+
+
