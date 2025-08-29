@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+        int count = 0;
+        while (true) {
+            num = scanner.nextInt();
+            if (num == -1) {
+                break;
+            }
+            if (num < min) {
+                min = num;
+            }
+            if (num > max) {
+                max = num;
+            }
+            sum += num;
+            count++;
+        }
+        if (count > 0) {
+            double average = (double) sum / count;
+
+            System.out.println("Min = " + min);
+            System.out.println("Max = " + max);
+            System.out.println("Sum = " + sum);
+            System.out.printf("Average = %.6f\n", average);
+        } else {
+            System.out.println("No numbers entered.");
+        }
+        scanner.close();
+    }
+}
